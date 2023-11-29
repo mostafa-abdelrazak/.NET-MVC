@@ -1,0 +1,20 @@
+﻿@model Student
+<h1 class="text">
+    Student Id : @Model.ID <br />
+    Student name : @Model.Name <br />
+    Student Age : @Model.Age <br />
+</h1>
+
+<form method="post">
+    <label asp-for="Name"> Student name </label>
+    <input asp-for="Name" placeholder="@Model.Name">
+    <label asp-for="Age"> Student Age </label>
+    <input asp-for="Age" placeholder="@Model.Age">
+    <select asp-for="DeptNo" asp-items="@ViewBag.deps">
+    </select>
+
+
+
+    <input type="submit" class="btn btn-success" />
+</form>
+

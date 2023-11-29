@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MVC lab 3 &amp; 4.props" />
+</Project>

@@ -1,0 +1,36 @@
+﻿@model List<Course>
+
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Course s in Model)
+            {
+                <tr>
+                    <td>@s.ID</td>
+                    <td>@s.name</td>
+                   
+                    <td>
+                        <a class="btn btn-primary" asp-action="Details" asp-route-ID="@s.ID">Details</a>
+                        <a class="btn btn-success" asp-action="Edit" asp-route-ID="@s.ID">Edit</a>
+                        <!--  
+                        <a class="btn btn-danger" onclick="return confirm('are you sure ?')" asp-action="delete" asp-route-ID="@s.ID">Delete</a>
+                         -->
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<!--
+<a asp-action="Create" class="btn btn-success ">Create Course</a>
+-->

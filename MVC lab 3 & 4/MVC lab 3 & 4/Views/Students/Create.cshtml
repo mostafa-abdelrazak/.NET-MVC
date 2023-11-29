@@ -1,0 +1,12 @@
+﻿@model Student
+<form method="post">
+    <label asp-for="Name"> student name </label>
+    <input asp-for="Name"> <span asp-validation-for="Name" style="color: red;"></span>
+    <label asp-for="Age"> student age </label>
+    <input asp-for="Age"> <span asp-validation-for="Age" style="color: red;"></span>
+    <select asp-for="DeptNo" asp-items="@ViewBag.deps">
+
+    </select>
+
+    <input type="submit" class="btn btn-success"/>
+</form>

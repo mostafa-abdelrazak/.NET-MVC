@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+@model List<object>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>display</title>
+    <link href="\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>view bag</h2>
+    <table class="table table-bordered">
+       <tr>
+            
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        
+       </tr>
+       <tr>
+            
+                <td>@ViewBag.id </td>
+                <td>@ViewBag.name </td>
+                <td>@ViewBag.age </td>
+            
+       </tr>
+        
+    </table>
+    <h2>model view</h2>
+    <table class="table table-bordered">
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+
+        </tr>
+        <tr>
+
+            <td>@Model[2] </td>
+            <td>@Model[0] </td>
+            <td>@Model[1] </td>
+
+        </tr>
+
+    </table>
+</body>
+</html>

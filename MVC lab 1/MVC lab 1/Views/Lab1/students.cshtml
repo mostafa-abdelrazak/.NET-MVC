@@ -1,0 +1,32 @@
+﻿@model List<Student>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>students</title>
+</head>
+<body>
+    <table>
+        <tr>
+        <th>Name</th>
+        <th>ID</th>
+        </tr>
+       
+            @foreach (Student s in Model)
+            {
+            <tr>
+                <td>@s.Id</td>
+                <td>@s.Name</td>
+            </tr>
+            }
+            
+       
+    </table>
+</body>
+</html>

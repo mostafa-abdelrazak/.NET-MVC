@@ -1,0 +1,11 @@
+﻿@model Department
+<form method="post">
+    <label asp-for="Name"> depatment name </label>
+    <input asp-for="Name"> 
+    
+
+
+    <input type="submit" class="btn btn-success" />
+    <br />
+    <span asp-validation-for="Name" style="color: red;"></span>
+</form>

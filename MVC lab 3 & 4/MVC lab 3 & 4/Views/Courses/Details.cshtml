@@ -1,0 +1,37 @@
+﻿@model Course
+<h1 class="text">
+    Course Id : @Model.ID <br />
+    Course name : @Model.name <br />
+
+
+</h1>
+
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Department ID</th>
+            <th>Department Name</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Department s in Model.departments)
+            {
+                <tr>
+                    <td>@s.ID</td>
+                    <td>@s.Name</td>
+                    
+                </tr>
+            }
+        }
+
+
+
+    </tbody>
+</table>
+

@@ -1,0 +1,40 @@
+﻿@model Department
+<h1 class="text">
+    Department Id : @Model.ID <br />
+    Department name : @Model.Name <br />
+
+
+</h1>
+
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>age</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Student s in Model.Students)
+            {
+                <tr>
+                    <td>@s.ID</td>
+                    <td>@s.Name</td>
+                    <td>@s.Age</td>
+                </tr>
+            }
+        }
+
+
+
+    </tbody>
+</table>
+
+<form method="post" asp-route-id="@Model.ID">
+    <input type="submit" class="btn btn-danger" value="Delete" />
+</form>

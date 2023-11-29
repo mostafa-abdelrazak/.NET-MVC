@@ -1,0 +1,50 @@
+﻿@model Department
+<h1 class="text">
+    Department Id : @Model.ID <br />
+    Department name : @Model.Name <br />
+
+
+</h1>
+<form method="post">
+    <label asp-for="Name"> depatment name </label>
+    <input asp-for="Name" placeholder="@Model.Name">
+
+    <label > Remove Courses from department </label>
+    <select name="Remove" asp-items="@ViewBag.CoursesIn" multiple>
+    </select>
+
+    <label >Add Courses to department </label>
+    <select name="Add" asp-items="@ViewBag.CoursesNotIn" multiple>
+    </select>
+
+
+    <input type="submit" class="btn btn-success" />
+</form>
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>age</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Student s in Model.Students)
+            {
+                <tr>
+                    <td>@s.ID</td>
+                    <td>@s.Name</td>
+                    <td>@s.Age</td>
+                </tr>
+            }
+        }
+
+
+
+    </tbody>
+</table>
